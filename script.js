@@ -9,6 +9,20 @@ const progressBar = document.getElementById("progress-bar");
 const stepText = document.getElementById("step-indicator-text");
 const stepNameLabel = document.getElementById("step-name");
 const successMsg = document.getElementById("success-msg");
+const emailInput = document.getElementById("email");
+const emailError = document.getElementById("email-error");
+
+function isValidEmail(value) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
+function showEmailError() {
+    emailError.classList.remove("hidden");
+}
+
+function hideEmailError() {
+    emailError.classList.add("hidden");
+}
 
 function updateStep() {
     document.querySelectorAll(".step-content").forEach((step) => step.classList.remove("active"));
@@ -37,6 +51,18 @@ function updateStep() {
 }
 
 nextBtn.addEventListener("click", () => {
+    if (currentStep === 2) {
+        const emailValue = emailInput.value.trim();
+
+        if (!isValidEmail(emailValue)) {
+            showEmailError();
+            emailInput.focus();
+            return;
+        }
+
+        hideEmailError();
+    }
+
     if (currentStep < totalSteps) {
         currentStep++;
         updateStep();
@@ -51,11 +77,32 @@ prevBtn.addEventListener("click", () => {
 });
 
 submitBtn.addEventListener("click", () => {
+    const emailValue = emailInput.value.trim();
+
+    if (!isValidEmail(emailValue)) {
+        currentStep = 2;
+        updateStep();
+        showEmailError();
+        emailInput.focus();
+        return;
+    }
+
+    hideEmailError();
     successMsg.classList.remove("hidden");
     window.scrollTo({
         top: document.getElementById("register").offsetTop - 100,
         behavior: "smooth"
     });
+});
+
+emailInput.addEventListener("input", () => {
+    if (emailError.classList.contains("hidden")) {
+        return;
+    }
+
+    if (isValidEmail(emailInput.value.trim())) {
+        hideEmailError();
+    }
 });
 
 updateStep();
