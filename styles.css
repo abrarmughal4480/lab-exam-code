@@ -1,0 +1,114 @@
+:root {
+    --brand: #1a56db;
+    --brand-strong: #003fb1;
+    --surface-glass: rgba(255, 255, 255, 0.8);
+}
+
+body {
+    background:
+        radial-gradient(1200px 500px at 10% -10%, rgba(26, 86, 219, 0.16), transparent 65%),
+        radial-gradient(900px 500px at 100% 0%, rgba(0, 63, 177, 0.12), transparent 55%),
+        linear-gradient(180deg, #f8f9fa 0%, #eef2ff 100%);
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.delay-100 {
+    animation-delay: 100ms;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+.step-content {
+    display: none;
+}
+
+.step-content.active {
+    display: block;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.modern-card {
+    border-radius: 12px;
+    border: 1px solid rgba(195, 197, 215, 0.7);
+    background: var(--surface-glass);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 16px 36px rgba(17, 24, 39, 0.08);
+    transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.modern-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 42px rgba(17, 24, 39, 0.12);
+}
+
+.modern-panel {
+    background: rgba(255, 255, 255, 0.86);
+    border: 1px solid rgba(195, 197, 215, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.modern-btn {
+    border-radius: 0.5rem;
+    padding: 0.7rem 1.4rem;
+    box-shadow: 0 8px 24px rgba(26, 86, 219, 0.26);
+    transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+}
+
+.modern-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(26, 86, 219, 0.3);
+    filter: saturate(1.08);
+}
+
+.modern-btn-secondary {
+    border-radius: 0.5rem;
+    padding: 0.7rem 1.4rem;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.modern-btn-secondary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(17, 24, 39, 0.1);
+}
+
+.modern-input {
+    border-radius: 0.5rem;
+    transition: box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.modern-input:focus {
+    border-color: var(--brand);
+    box-shadow: 0 0 0 4px rgba(26, 86, 219, 0.18);
+}
