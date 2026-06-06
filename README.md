@@ -49,23 +49,23 @@ The following screenshots are included in the `images` folder and document the m
 
 ### Landing Page
 
-![Landing page](images/landing-page.png)
+![Landing page](https://raw.githubusercontent.com/abrarmughal4480/lab-exam-code/main/images/landing-page.png)
 
 ### Step 1: Personal Information
 
-![Step 1 registration screen](images/name.png)
+![Step 1 registration screen](https://raw.githubusercontent.com/abrarmughal4480/lab-exam-code/main/images/name.png)
 
 ### Step 2: Email Validation Error
 
-![Email validation error](images/email-error.png)
+![Email validation error](https://raw.githubusercontent.com/abrarmughal4480/lab-exam-code/main/images/email-error.png)
 
 ### Step 3: Course Selection
 
-![Course selection dropdown](images/course-selection.png)
+![Course selection dropdown](https://raw.githubusercontent.com/abrarmughal4480/lab-exam-code/main/images/course-selection.png)
 
 ### Submission Success
 
-![Successful submission state](images/submittion.png)
+![Successful submission state](https://raw.githubusercontent.com/abrarmughal4480/lab-exam-code/main/images/submittion.png)
 
 ## Form Behavior
 
