@@ -49,7 +49,7 @@ The following screenshots are included in the `images` folder and document the m
 
 ### Landing Page
 
-![Landing page](images/Html%20%E2%86%92%20Body.png)
+![Landing page](images/landing-page.png)
 
 ### Step 1: Personal Information
 
